@@ -1,0 +1,129 @@
+/* ####################################################################*/
+/* LOGIN */
+
+.main-container {
+    min-height: 100vh;
+    background: rgb(111,99,8);
+    background: linear-gradient(90deg, rgba(111,99,8,1) 0%, rgba(231,207,27,1) 50%, rgba(111,99,8,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.btn {
+    background-color: #6f6308;
+    border-color: #6f6308;
+}
+
+.btn:hover {
+    background-color: #5e5408;
+    border-color: #6f6308;
+}
+
+.btn:focus {
+    background-color: #5e5408;
+    border-color: #6f6308;
+}
+
+/* ####################################################################*/
+/* HOME */
+
+.home-container {
+    min-height: 100vh;
+    height: auto;
+    /*background: rgb(111,99,8);*/
+    background: linear-gradient(90deg, rgba(111,99,8,1) 0%, rgba(231,207,27,1) 50%, rgba(111,99,8,1) 100%);
+}
+
+.list-tasks {
+    width: 80%;
+    background-color: #ffffff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    background-color: #ffffff;
+    border-top: solid 1px #e4e4e4;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.task-info{
+    width: 90%;
+}
+
+.delete-task {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.icon:hover {
+    color: red;
+}
+
+.task:hover {
+    cursor: pointer;
+    background-color: #dbdbdb;
+}
+
+.input-taskname {
+    box-shadow: none;
+}
+
+.modal-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #141414db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-card {
+    width: 50%;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: end;
+}
+
+/* ####################################################################*/
+/* HEADER */
+
+.header-container {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 320px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        width: 50%;
+    }
+}
