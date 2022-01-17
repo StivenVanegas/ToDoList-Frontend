@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { login } from "../services/AuthService";
 import { useAuth } from "../contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
 
@@ -70,9 +71,12 @@ export const Login = () => {
                             <label>Password</label>
                     </div>
                     <div className="d-grid gap-2">
-                        <button className="btn btn-primary">Log In</button>
+                        <button className="btn1">Log In</button>
                     </div>
                 </form>
+                <div className="create-account">
+                    <Link to="/register">create account</Link>
+                </div>
             </div>
             
         </section> 

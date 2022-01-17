@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "./Header";
-import { getTasks} from "../services/UserService";
+import { getTasks, updateUser} from "../services/UserService";
 import { Modal } from "./Modal";
 import { FormAddTask } from "./FormAddTask";
 import { useTasks } from "../contexts/TaskContext";
@@ -15,7 +15,7 @@ export const Home = () => {
     const taskList = tasks.taskList;
     const [loading, setLoading] = useState(true);
     const [selectTask, setSelectTask] = useState({});
-    const {modal, setModal} = useModal();
+    const {setModal} = useModal();
 
     const listTasks = () => {
         getTasks(auth.loggerUserId, auth.token)
@@ -36,6 +36,7 @@ export const Home = () => {
         e.stopPropagation();
         const arr = taskList.filter(task => task.id !== taskId);
         setTasks((...prev) => ({...prev, taskList:arr}));
+        updateUser({tasks:arr}, auth.loggerUserId, auth.token);
         console.log(arr);
     }
 

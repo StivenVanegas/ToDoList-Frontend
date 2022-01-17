@@ -13,7 +13,7 @@ export const Header = () => {
     return(
         <header className="header-container py-2">
             <h1 className="m-0">To do list</h1>
-            <button className="btn btn-primary" onClick={handleLogOut}>Log out</button>
+            <button className="btn1" onClick={handleLogOut}>Log out</button>
         </header>
     );
 }

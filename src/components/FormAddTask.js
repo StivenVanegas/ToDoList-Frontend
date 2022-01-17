@@ -72,14 +72,14 @@ export const FormAddTask = () => {
                             value={name} onChange={(e) => handleChangeName(e)} />
                         < textarea className="form-control shadow-none mb-1" placeholder="description" rows="2"
                             value={description} onChange={(e) => handleChangeDescription(e)} />
-                        <button className="btn btn-primary me-1"> Add task</button>
-                        <button className="btn btn-primary" type="button" onClick={() => handleClickCancel()}>Cancel</button>
+                        <button className="btn1 me-1"> Add task</button>
+                        <button className="btn2" type="button" onClick={() => handleClickCancel()}>Cancel</button>
                     </form>
 
                 </div >
                 :
                 <div>
-                    <button className="btn btn-primary m-1" onClick={() => setShowForm(true)}>Add task</button>
+                    <button className="btn1 m-1" onClick={() => setShowForm(true)}>Add task</button>
                 </div>
             }
         </>

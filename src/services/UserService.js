@@ -22,3 +22,14 @@ export const updateUser = (userDto, userId, token) => {
         body: JSON.stringify(userDto)
     });
 }
+
+export const createUser = (userDto)  => {
+    return fetch(API_URL+"v1/user", {
+        method:"POST",
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify(userDto)
+    });
+}
